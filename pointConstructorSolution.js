@@ -67,9 +67,9 @@ function Point(x, y) {
  The x and y values should be the same as those for 
  createPoint above and in the same order.
  Do not change the print statements */
-let p2 = new Point(1,2)// make with constructor function
+let p2 = new Point(3,4)// make with constructor function
 p2.print();
-p2 = new Point(3,4)//make with constructor function
+p2 = new Point(10,15)//make with constructor function
 p2.print();
-p2 = new Point(5,6)//make with constructor function
+p2 = new Point(-2,8)//make with constructor function
 p2.print();
