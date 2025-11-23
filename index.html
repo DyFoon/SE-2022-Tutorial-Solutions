@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Course Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Course Explorer</h1>
+
+  <!-- Loading Courses -->
+  <section id="load-section">
+    <h2>Load Courses (JSON)</h2>
+    <input type="file" id="fileInput" accept=".json" />
+    <span id="fileName"></span>
+    <div id="errorMessage" class="error"></div>
+  </section>
+
+  <!-- Filtering and Sorting -->
+  <section id="controls">
+    <h2>Sort and Filter</h2>
+
+    <label>
+      Department:
+      <select id="filterDepartment">
+        <option value="All">All</option>
+        <!-- options added with JS -->
+      </select>
+    </label>
+        <!--Year Level-->
+    <label>
+      Level:
+      <select id="filterLevel">
+        <option value="All">All</option>
+      </select>
+    </label>
+        <!--Credits Given-->
+    <label>
+      Credits:
+      <select id="filterCredits">
+        <option value="All">All</option>
+      </select>
+    </label>
+        <!--Assigned Prof-->
+    <label>
+      Instructor:
+      <select id="filterInstructor">
+        <option value="All">All</option>
+      </select>
+    </label>
+
+    <label>
+      Sort By:
+      <select id="sortBy">
+        <option value="none">None</option>
+        <option value="id-asc">ID (A-Z)</option>
+        <option value="id-desc">ID (Z-A)</option>
+        <option value="title-asc">Title (A-Z)</option>
+        <option value="title-desc">Title (Z-A)</option>
+        <option value="semester-asc">Semester (Earliest first)</option>
+        <option value="semester-desc">Semester (Latest first)</option>
+      </select>
+    </label>
+  </section>
+
+  <!-- Main content -->
+  <main id="main">
+    <section id="courseList"></section>
+
+    <section id="courseDetails">
+      <p>Select a course to see details.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
